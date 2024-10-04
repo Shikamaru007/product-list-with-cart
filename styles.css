@@ -4,4 +4,133 @@
     margin: 0;
     box-sizing: border-box;
 }
-/*   font-family: "Red Hat Text", sans-serif;   */
+body {
+    font-family: "Red Hat Text", sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(20, 50%, 98%);
+    padding: 3rem 0;
+
+}
+.container {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    padding: 1.5rem 0;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.product {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.product-list {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+}
+.product-list span {
+    font-size: .8rem;
+    color: hsl(7, 20%, 60%);
+}
+.product-list p {
+    font-size: .9rem;
+    color: hsl(14, 86%, 42%);
+    font-weight: 600;
+}
+.image img {
+    width: 100%; 
+    border-radius: 10px;   
+}
+.image{
+    position: relative;
+    display: flex;
+    margin-bottom: 2rem;
+}
+.image .btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 65%;
+    margin: auto;
+    transform: translateY(50%);
+    font-family: inherit;
+    font-weight: 500;
+    color: hsl(14, 65%, 9%);
+    padding: .5rem 1rem;
+    border:1.5px solid  hsl(7, 20%, 60%);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    background-color: white;
+    cursor: pointer;
+}
+.image .btn .productCount {
+    position: absolute;
+    background-color: hsl(14, 86%, 42%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+.image .btn .productCount img {
+    display: flex;
+    width: .7rem;
+}
+.productCount span {
+    font-size: 1rem;
+    color: white;
+    font-weight: 400;
+}
+.image .btn:hover {
+    color: hsl(14, 86%, 42%);
+    border: 1.5px solid hsl(14, 86%, 42%);
+}
+.image .btn img {
+    width: 1rem;
+}
+.cart {
+    width: 37%;
+    height: fit-content;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+h1 {
+    line-height: 1;
+}
+h2 {
+    color: hsl(14, 86%, 42%);
+}
+h3 {
+    font-size: .9rem;
+    color: hsl(14, 65%, 9%);
+    font-weight: 600;
+    margin-bottom: .1rem;
+}
+.emptyCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    color: hsl(12, 20%, 44%);
+    font-weight: 500;
+    
+}
+.emptyCart img {
+    width: 8rem;
+}
