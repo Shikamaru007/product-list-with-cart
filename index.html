@@ -4,26 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/92fa8ead7f.js" crossorigin="anonymous"></script>
     <script defer src="index.js"></script>
     <title>Product List</title>
 </head>
 <body>
-
     <main class="container">
         <div class="product">
             <h1>Desserts</h1>
             <div class="product-list" id="productGrid"></div>
         </div>
-        <div class="cart">
+        <div class="cart" id="cart">
             <h2>Your Cart (<span id="quantity">0</span>)</h2>
-            <div class="emptyCart">
+            <div class="emptyCart" id="emptyCart">
                 <img src="assets/images/illustration-empty-cart.svg" alt="empty cart image">
                 <p>Your added items will appear here</p>                
             </div>
-            <div class="cartList" id="cartList">
-
+            <div class="cartList" id="cartList"></div>
+            <div class="orderSummary" id="orderSummary">
+                <div class="amountSummary">
+                    <span>Order Total</span>
+                    <span id="orderTotalAmount"></span>
+                </div>
+                <div class="carbon-delivery">
+                    <img src="assets/images/icon-carbon-neutral.svg" alt="carbon neutral image">
+                    <p>This is a <span>carbon-neutral</span> delivery</p>
+                </div>
+                <button id="confirmOrderBtn">Confirm Order</button>
             </div>
         </div>
+        <div id="confirmationModal" class="modal">
+            <div class="modalContainer">
+                <div class="orderHeader">
+                    <img src="assets/images/icon-order-confirmed.svg" alt="check icon">
+                    <h2>Order Confirmed</h2>
+                    <p>We hope you enjoyed your food!</p>
+                </div>
+                <div class="confirmedOrderItems" id="confirmedOrderItems"></div>
+                <div class="confirmedOrderTotal">
+                    <p>Order Total</p>
+                    <span id="confirmationTotal">$0.00</span>
+                </div>
+                <button id="startNewOrder" class="btn">Start New Order</button>
+            </div>
+        </div>
+       
     </main>    
 </body>
 </html>
